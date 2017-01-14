@@ -42,6 +42,7 @@ public class LogControl {
 	 * Get a logger with an source other than root.
 	 */
 	public static Logger getLogger(Class<?> cls){
+		Thread.currentThread().getStackTrace()[1].getClassName();
 		return Logger.getLogger(LOG_ROOT + "." + cls.getSimpleName());
 	}
 	
